@@ -9,5 +9,7 @@ namespace Simple_ToDo.Services
     public interface ITodoItemService
     {
         Task<TodoItem[]> GetIncompleteItemsAsync();
+
+        Task<bool> AddItemAsync(TodoItem newItem);
     }
 }
