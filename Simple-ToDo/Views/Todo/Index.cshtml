@@ -1,0 +1,35 @@
+﻿@model Simple_ToDo.Models.TodoViewModels.TodoViewModel
+
+@{
+    ViewData["Title"] = "Manage your Todo list";
+}
+
+<div class="panel panel-default todo-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#xx2714;</td>
+                <td>Item</td>
+                <td>Due</td>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model.Items)
+        {
+        <tr>
+            <td>
+                <input type="checkbox" class="done-checkbox" />
+            </td>
+            <td>@item.Title</td>
+            <td>@item.DueAt</td>
+        </tr>
+        }
+    </table>
+
+    <div class="panel-footer add-item-form">
+        <!-- TODO: Add item form -->
+    </div>
+</div>
+
