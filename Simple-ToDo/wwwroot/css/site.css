@@ -43,3 +43,8 @@ table tr.done {
     text-decoration: line-through;
     color: #888;
 }
+
+thead {
+    background-color: #5cb85c;
+    color: #ffffff;
+} 

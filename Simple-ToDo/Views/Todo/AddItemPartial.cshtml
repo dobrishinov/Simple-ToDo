@@ -1,7 +1,17 @@
 ﻿@model TodoItem
 
-<form asp-action="AddItem" method="POST">
-    <label asp-for="Title">Add a new item:</label>
-    <input asp-for="Title" />
-    <button type="submit">Add</button>
+<form asp-action="AddItem" method="POST" class="form-inline">
+    
+
+    <div class="form-group mb-2">
+        <label asp-for="Title">Todo:</label>
+        <input asp-for="Title" type='text' class="form-control" />
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <label asp-for="DueAt">Due Date:</label>
+        <input asp-for="DueAt" type='date' class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mb-2">
+        <i class="glyphicon glyphicon-check"></i> Add
+    </button>
 </form>

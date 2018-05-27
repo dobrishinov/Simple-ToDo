@@ -21,7 +21,7 @@ namespace Simple_ToDo.Services
         {
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
-            newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+            newItem.DueAt = newItem.DueAt;
 
             _context.Items.Add(newItem);
 
@@ -32,7 +32,7 @@ namespace Simple_ToDo.Services
         public async Task<TodoItem[]> GetIncompleteItemsAsync()
         {
             return await _context.Items
-                .Where(x => x.IsDone == false)
+                .Where(x => x.IsDone == false).OrderBy(x=> x.DueAt)
                 .ToArrayAsync();
         }
     }
