@@ -16,5 +16,7 @@ namespace Simple_ToDo.Models
         public string Title { get; set; }
 
         public DateTimeOffset? DueAt { get; set; }
+
+        public string UserId { get; set; }
     }
 }
