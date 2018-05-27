@@ -15,6 +15,8 @@ namespace Simple_ToDo.Data
         {
         }
 
+        public DbSet<TodoItem> Items { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
