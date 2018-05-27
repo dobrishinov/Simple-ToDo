@@ -38,7 +38,7 @@ namespace Simple_ToDo
 
             services.AddMvc();
 
-            services.AddSingleton<ITodoItemService, FakeTodoItemService>();
+            services.AddScoped<ITodoItemService, TodoItemService>();
 
         }
 
